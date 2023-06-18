@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Medical Store</title>
+    <link rel="stylesheet" href="store-style.css">
+    <script>
+
+        // Function Block to facilitate Responsive Dropwdown
+        function myFunction() {
+
+            function mediaCapture(x) {
+
+                if (x.matches)
+                    return document.getElementById("hamburger-filler").style.display = "none";
+                else {
+                    var checking = document.getElementById("checkbox_toggle");
+                    if (checking.checked == true)
+                        return document.getElementById("hamburger-filler").style.display = "block";
+                    else
+                        return document.getElementById("hamburger-filler").style.display = "none";
+                }
+            }
+
+            var x = window.matchMedia("(width>768px)") // To track the device-width
+            mediaCapture(x); // Calling listener function at run time
+            x.addListener(mediaCapture); // Attaching listener function on state changes  
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- Header of the Pharmacy Store -->
+    <header>Pharmacy</header>
+
+    <!-- Navigation Bar of the Pharmacy Store -->
+    <nav class="navbar">
+
+        <!-- LOGO/ Brand -->
+        <div class="logo">The Medical Store</div>
+
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX (hidden) alongwith 'Hamburger Icon' to render Dropdown -->
+            <input type="checkbox" id="checkbox_toggle" onclick="myFunction()" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+
+                <li><a href="store.html">Home</a></li>
+
+                <li class="services">
+                    <a href="">Our Medicines</a>
+
+                    <!-- DROPDOWN MENU -->
+                    <ul class="dropdown">
+                        <li><a href="">Fever</a></li>
+                        <li><a href="">Muscle Pains</a></li>
+                        <li><a href="">Cold and Cough</a></li>
+                    </ul>
+
+                </li>
+
+                <li class="services">
+                    <a href="">Health Care</a>
+
+                    <!-- DROPDOWN MENU -->
+                    <ul class="dropdown">
+                        <li><a href="">Baby Care</a></li>
+                        <li><a href="">Skin Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Personal Care</a></li>
+                        <li><a href="">Pet Care</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="form.html" target="_blank">Lab Test</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- A Filler-Block for Mobile Width Navigation Bar -->
+    <div id="hamburger-filler" style="width: 300px; height: 150px; margin-top: 50px;">
+    </div>
+
+    <!-- Offers flipped-periodically with Animation (Slideshow Container)  -->
+    <section class="container">
+        <div id="slideshow">
+            <div class="slide-wrapper">
+                <!-- Populating each slides with Animation-images -->
+                <div class="slide">
+                    <img src="/images/Animation/ani1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/images/Animation/ani2.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/images/Animation/ani3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/images/Animation/ani4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/images/Animation/ani5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Covid Care Section -->
+    <section class="container">
+        <br>
+        <h2>Covid Care</h2>
+        <br>
+        <div class="flex">
+            <article class="product">
+                <p class="title">Covid Test Kit</p>
+                <img src="/images/Products/c1.jpg" alt="c1" width="200" height="100"><br>
+                <label>₹40/-</label><br>
+                <label>Offer: ₹30/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+            <article class="product">
+                <p class="title">Covid Essentials</p>
+                <img src="/images/Products/c2.jpg" alt="c2" width="200" height="100"><br>
+                <label>₹240/-</label><br>
+                <label>Offer: ₹170/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+            <article class="product">
+                <p class="title">Sanitizer Bottle</p>
+                <img src="/images/Products/c3.jpg" alt="c3" width="200" height="100"><br>
+                <label>₹99/-</label><br>
+                <label>Offer: ₹87/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+            <article class="product">
+                <p class="title">Mask</p>
+                <img src="/images/Products/c4.jpg" alt="c4" width="200" height="100"><br>
+                <label>₹45/-</label><br>
+                <label>Offer: ₹30/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Diabetes Care Section -->
+    <section class="container">
+        <br>
+        <h2>Diabetes Care</h2>
+        <br>
+        <div class="flex">
+            <article class="product">
+                <p class="title">BGR-34</p>
+                <img src="/images/Products/d1.jpg" alt="d1" width="200" height="100"><br>
+                <label>₹70/-</label><br>
+                <label>Offer: ₹62/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+            <article class="product">
+                <p class="title">Chyawanprash</p>
+                <img src="/images/Products/d2.jpg" alt="d2" width="200" height="100"><br>
+                <label>₹150/-</label><br>
+                <label>Offer: ₹135/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+            <article class="product">
+                <p class="title">Toothpaste</p>
+                <img src="/images/Products/d3.jpg" alt="d3" width="200" height="100"><br>
+                <label>₹35/-</label><br>
+                <label>Offer: ₹30/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+            <article class="product">
+                <p class="title">Cookies</p>
+                <img src="/images/Products/d4.png" alt="d4" width="200" height="100"><br>
+                <label>₹35/-</label><br>
+                <label>Offer: ₹30/-</label><br>
+                <button class="cart">Add to cart</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer of the Pharmacy Store -->
+    <footer>
+        <div class="footer-content">
+            @copyright. Only for demonstration purposes
+        </div>
+    </footer>
+
+</body>
+
+</html>

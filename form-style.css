@@ -1,0 +1,150 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------x----------------------------------------------- */
+
+/* Containing the Form inside a Container */
+.container {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+/* ---------------------------------------------------------x----------------------------------------------- */
+
+/* Surrounding the Form with Shadow */
+.form-box {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 100%;
+    height: 400px;
+    overflow: scroll;
+    display: flex;
+}
+
+/* ---------------------------------------------------------x----------------------------------------------- */
+
+/* STYLING THE FORM */
+
+/* Styling the headings such as Contact, Address, Lab Test, and like elements ... */
+.form-label {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    color: black;
+}
+
+.left-form {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Wrapping the Form-Data in proportion to device-width */
+.area-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Altering the default input style with underlines */
+.underline input {
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    width: 160px;
+}
+
+/* Styling Sub-headers such as 'District', 'Date', 'Time', ... */
+.subheading {
+    display: block;
+    color: black;
+    font-weight: 600;
+}
+
+.block {
+    display: block;
+    color: black;
+}
+
+.box {
+    border: 1px solid steelblue;
+    border-radius: 3px;
+    color: steelblue;
+}
+
+/* ---------------------------------------------------------x----------------------------------------------- */
+
+/* Aligning the Image to the Right of the Form */
+img {
+    position: fixed;
+    left: 50%;
+    width: 375px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------------x----------------------------------------------- */
+
+/* Aligning the Submit and Reset Buttons */
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling the Submit and Reset Buttons of the Patient-Registration-Form */
+.form-button {
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: rgb(175, 102, 243);
+    font-size: medium;
+}
+
+/* ---------------------------------------------------------x----------------------------------------------- */
+
+/* Adapting to Tablet-width or like devices */
+@media screen and (width<=800px) {
+    img {
+        width: 50%;
+    }
+
+    .left-form {
+        width: 50%;
+        /* padding: 20px; */
+    }
+}
+
+/* Adapting to the Mobile-width */
+@media screen and (width<=400px) {
+    img {
+        display: none;
+    }
+
+    .left-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .area-wrap {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .underline input {
+        border: none;
+        border-bottom: 1px solid gray;
+        padding: 10px;
+        width: 100%;
+    }
+}

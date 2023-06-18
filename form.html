@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" href="form-style.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <form action="" id="labForm">
+
+            <article class="form-box">
+
+                <!-- Left-Sided-Form -->
+                <div class="left-form">
+
+                    <!-- Patient/Relatives Contact Details -->
+                    <article class="contact">
+                        <label class="form-label">1. Your Contact Details</label><br>
+                        <div class="contact-area">
+                            <div class="area-wrap underline">
+                                <input type="text" placeholder="Full Name" required>
+                                <input type="text" placeholder="Patient Id if exists" required>
+                                <input type="number" placeholder="Contact Number" minlength="10" maxlength="10"
+                                    required>
+                                <input type="email" placeholder="Email id" required>
+                            </div>
+                        </div>
+                    </article>
+                    <br>
+
+                    <!-- Entering Address-details of the Patient -->
+                    <article class="address">
+                        <label class="form-label">2. Address</label><br>
+                        <div class="address-area">
+                            <div class="area-wrap underline">
+                                <input type="text" placeholder="H-No" required>
+                                <input type="text" placeholder="Street" required>
+                                <input type="text" placeholder="Area" required>
+                            </div>
+                            <br>
+                            <div class="district">
+                                <label class="subheading">District</label>
+                                <select required>
+                                    <option value="0">Choose</option>
+                                    <option value="1">District A</option>
+                                    <option value="2">District B</option>
+                                    <option value="3">District C</option>
+                                </select>
+                            </div>
+                        </div>
+                    </article>
+                    <br>
+
+                    <!-- LAB-Test Checkboxes (At least one box should be checked) -->
+                    <article class="testtype">
+                        <label class="form-label">3. Test Type</label><br>
+                        <div class="testtype-area">
+                            <label class="block"><input type="checkbox" name="checking"
+                                    value="c1">&nbsp;&nbsp;CBC</label>
+                            <label class="block"><input type="checkbox" name="checking" value="c2">&nbsp;&nbsp;Complete
+                                Urine</label>
+                            <label class="block"><input type="checkbox" name="checking" value="c3">&nbsp;&nbsp;Lipid
+                                Profile</label>
+                            <label class="block"><input type="checkbox" name="checking" value="c4">&nbsp;&nbsp;Thyroid
+                                Stimulating Hormone
+                                (TSH)</label>
+                            <label class="block" name="checking" value="c5"><input type="checkbox">&nbsp;&nbsp;Glucose
+                                Test</label>
+                        </div>
+                    </article>
+                    <br>
+
+                    <!-- Hardcopy-Report-Confirmation in the form of Radio-button -->
+                    <article class="hardcopy">
+                        <label class="form-label">4. Do you want a hard copy of the report also?</label><br>
+                        <div class="hardcopy-area">
+                            <label class="block"><input type="radio" name="radio" required>&nbsp;Yes</label>
+                            <label class="block"><input type="radio" name="radio">&nbsp;No</label>
+                        </div>
+                    </article>
+                    <br>
+                    <!-- Booking Date and Time for Lab Specimen  -->
+                    <article class="date-time">
+                        <label class="form-label">5. Select your comfortable Date and Time</label><br><br>
+                        <div class="row-evenly">
+                            <label class="subheading">Date:-&nbsp;<input class="box" type="date" required></label><br>
+                            <label class="subheading">Time:-&nbsp;<input class="box" type="time" required></label>
+
+                        </div>
+                    </article>
+                    <br>
+                </div>
+
+                <!-- Right-Sided-Image -->
+                <img src="/images/Lab-Test/lab-test.jpg" alt="abc">
+
+            </article>
+
+            <br>
+
+            <!-- Submit and Reset Button -->
+            <article class="button">
+                <button class="form-button" type="reset">Reset</button>&nbsp;&nbsp;
+                <button class="form-button" type="submit">submit</button>
+            </article>
+
+        </form>
+    </section>
+    <!-- Javascript to enforce validation of checkboxes (At-least one checkbox should be filled) -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
